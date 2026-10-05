@@ -23,7 +23,7 @@ assert.equal(manifest.extensions['com.openai'].interface.defaultPrompt.length, 3
 assert.equal(mcp.mcpServers['acrux-robocep'].type, 'streamable-http');
 assert.equal(render.services[0].plan, 'free');
 assert.equal(render.services[0].autoDeployTrigger, 'off');
-assert.equal(render.services[0].branch, 'feat/mcp-v1');
+assert.equal(render.services[0].branch, 'main');
 assert.equal(render.services[0].healthCheckPath, '/health');
 for (const group of ['dependencies', 'devDependencies']) for (const version of Object.values((await json('package.json'))[group])) {
   assert.match(version, /^\d+\.\d+\.\d+$/);
