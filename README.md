@@ -125,7 +125,7 @@ A preparação do manifest não instala o plugin nem publica seu servidor.
 
 ## Render Free — preparado, sem deploy
 
-O `render.yaml` configura um web service Node Free na branch `feat/mcp-v1`,
+O `render.yaml` configura um web service Node Free na branch `main`,
 com autodeploy desligado, health check `/health` e bind `0.0.0.0`. O build
 inclui as dependências de desenvolvimento para compilar TypeScript mesmo com
 `NODE_ENV=production`. O Render fornece `PORT` e `RENDER_EXTERNAL_URL`.
@@ -167,5 +167,5 @@ institucional. Robôs, projetos, competições, conquistas e galerias estavam va
 - [Agent Plugins: schema do manifest](https://agent-plugins.org/schemas/1.0.0/plugin.schema.json)
 - [Render: Blueprint](https://render.com/docs/blueprint-spec)
 
-Desenvolvimento e envio restritos a `feat/mcp-v1`. Sem merge na `main`,
-sem alterações no site e sem deploy.
+A V1 será implantada a partir da `main`, após integração e autorização de deploy.
+Esta preparação é enviada à `feat/mcp-v1`, sem merge, alterações no site ou deploy.
