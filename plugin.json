@@ -1,1 +1,22 @@
-
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "acrux-robocep-plugin",
+  "version": "1.0.0",
+  "description": "Consulte informações públicas da equipe ACRUX ROBOCEP, seus projetos, robôs, competições, blog e conquistas.",
+  "homepage": "https://ryan20014737472.github.io/Blog-acrux-/",
+  "repository": "https://github.com/Ryan20014737472/acrux-robocep-plugin",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "ACRUX ROBOCEP",
+        "shortDescription": "Informações públicas da ACRUX",
+        "longDescription": "Consulte informações públicas da equipe ACRUX ROBOCEP, seus projetos, robôs, competições, blog e conquistas.",
+        "defaultPrompt": [
+          "Conheça a equipe ACRUX ROBOCEP e seus projetos.",
+          "Veja os robôs, competições e conquistas publicadas pela ACRUX.",
+          "Pesquise no blog da ACRUX sobre um projeto ou atividade."
+        ]
+      }
+    }
+  }
+}

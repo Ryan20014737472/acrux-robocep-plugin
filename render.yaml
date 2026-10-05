@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://render.com/schema/render.yaml.json
+services:
+  - type: web
+    name: acrux-robocep-mcp
+    runtime: node
+    plan: free
+    repo: https://github.com/Ryan20014737472/acrux-robocep-plugin
+    branch: feat/mcp-v1
+    autoDeployTrigger: off
+    buildCommand: npm ci --include=dev --ignore-scripts && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        sync: false
+      - key: NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+        sync: false
+      - key: ALLOWED_ORIGINS
+        value: https://chatgpt.com,https://chat.openai.com

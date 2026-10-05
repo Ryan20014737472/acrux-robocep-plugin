@@ -1,0 +1,27 @@
+{
+  "name": "acrux-robocep-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MCP de leitura de conteúdo público publicado da ACRUX ROBOCEP.",
+  "type": "module",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "build": "tsc",
+    "start": "node --env-file-if-exists=.env dist/index.js",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "check": "tsc --noEmit && node scripts/check.mjs",
+    "audit:public": "npm run build && node --env-file-if-exists=.env scripts/audit-public.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.3.1",
+    "@modelcontextprotocol/node": "2.1.1",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.3.1",
+    "@types/node": "24.10.1",
+    "ajv": "8.20.0",
+    "typescript": "5.9.3",
+    "yaml": "2.9.1"
+  }
+}
